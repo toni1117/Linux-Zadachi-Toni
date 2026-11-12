@@ -1,0 +1,107 @@
+user@Linux:~/Documents/Linux_Uroci/Teoria$ cd ~/Documents
+user@Linux:~/Documents$ ls
+user@Linux:~/Documents$ mkdir Linux_Uroci
+user@Linux:~/Documents$ cd Linux_Uroci
+user@Linux:~/Documents/Linux_Uroci$ mkdir Teoria Praktika
+user@Linux:~/Documents/Linux_Uroci$ cd Teoria
+user@Linux:~/Documents/Linux_Uroci/Teoria$ touch komandi.txt uprajnenia.txt
+user@Linux:~/Documents/Linux_Uroci/Teoria$ ls
+komandi.txt  uprajnenia.txt
+user@Linux:~/Documents/Linux_Uroci/Teoria$ cp uprajnenia.txt ../Praktika/
+user@Linux:~/Documents/Linux_Uroci/Teoria$ cd ../Praktika
+user@Linux:~/Documents/Linux_Uroci/Praktika$ touch otgovori.txt
+user@Linux:~/Documents/Linux_Uroci/Praktika$ ls
+otgovori.txt  uprajnenia.txt
+user@Linux:~/Documents/Linux_Uroci/Praktika$ cd ..
+user@Linux:~/Documents/Linux_Uroci$ ls -R
+.:
+Praktika  Teoria
+
+./Praktika:
+otgovori.txt  uprajnenia.txt
+
+./Teoria:
+komandi.txt  uprajnenia.txt
+user@Linux:~/Documents/Linux_Uroci$ cd ~/Documents
+user@Linux:~/Documents$ ls
+Linux_Uroci
+user@Linux:~/Documents$ mkdir Uchilishten_Proekt
+user@Linux:~/Documents$ cd Uchilishten_Proekt
+user@Linux:~/Documents/Uchilishten_Proekt$ mkdir Materiali Predavane Arhiv
+user@Linux:~/Documents/Uchilishten_Proekt$ cd Materiali
+user@Linux:~/Documents/Uchilishten_Proekt/Materiali$ cd Materiali
+bash: cd: Materiali: No such file or directory
+user@Linux:~/Documents/Uchilishten_Proekt/Materiali$ touch plan.txt ekip.txt zadachi.txt
+user@Linux:~/Documents/Uchilishten_Proekt/Materiali$ ls
+ekip.txt  plan.txt  zadachi.txt
+user@Linux:~/Documents/Uchilishten_Proekt/Materiali$ cp plan.txt ../Predavane/plan_final.txt
+user@Linux:~/Documents/Uchilishten_Proekt/Materiali$ cd ../Predavane
+user@Linux:~/Documents/Uchilishten_Proekt/Predavane$ touch proverka.txt
+user@Linux:~/Documents/Uchilishten_Proekt/Predavane$ cp plan_final.txt ../Arhiv/
+user@Linux:~/Documents/Uchilishten_Proekt/Predavane$ cd ../Materiali
+user@Linux:~/Documents/Uchilishten_Proekt/Materiali$ cp ekip.txt ../Arhiv/ekip_backup.txt
+user@Linux:~/Documents/Uchilishten_Proekt/Materiali$ cd ../Arhiv
+user@Linux:~/Documents/Uchilishten_Proekt/Arhiv$ ls
+ekip_backup.txt  plan_final.txt
+user@Linux:~/Documents/Uchilishten_Proekt/Arhiv$ mkdir Dopalnitelno
+user@Linux:~/Documents/Uchilishten_Proekt/Arhiv$ cp ../Predavane/proverka.txt Dopalnitelno/
+user@Linux:~/Documents/Uchilishten_Proekt/Arhiv$ cd ..
+user@Linux:~/Documents/Uchilishten_Proekt$ ls -R
+.:
+Arhiv  Materiali  Predavane
+
+./Arhiv:
+Dopalnitelno  ekip_backup.txt  plan_final.txt
+
+./Arhiv/Dopalnitelno:
+proverka.txt
+
+./Materiali:
+ekip.txt  plan.txt  zadachi.txt
+
+./Predavane:
+plan_final.txt  proverka.txt
+user@Linux:~/Documents/Uchilishten_Proekt$ cd ~/Documents
+user@Linux:~/Documents$ mkdir Ekipen_Proekt
+user@Linux:~/Documents$ cd Ekipen_Proekt
+user@Linux:~/Documents/Ekipen_Proekt$ mkdir Dokumenti Dnevnik Backup
+user@Linux:~/Documents/Ekipen_Proekt$ ls
+Backup  Dnevnik  Dokumenti
+user@Linux:~/Documents/Ekipen_Proekt$ cd Dokumenti
+user@Linux:~/Documents/Ekipen_Proekt/Dokumenti$ touch ekip.txt plan.txt pravila.txt
+user@Linux:~/Documents/Ekipen_Proekt/Dokumenti$ nano ekip.txt
+user@Linux:~/Documents/Ekipen_Proekt/Dokumenti$ nano plan.txt
+user@Linux:~/Documents/Ekipen_Proekt/Dokumenti$ nano plan
+user@Linux:~/Documents/Ekipen_Proekt/Dokumenti$ nano pravila
+user@Linux:~/Documents/Ekipen_Proekt/Dokumenti$ ls
+ekip.txt  plan  plan.txt  pravila  pravila.txt
+user@Linux:~/Documents/Ekipen_Proekt/Dokumenti$ cp ekip.txt plan.txt pravila.txt ../Backup/
+user@Linux:~/Documents/Ekipen_Proekt/Dokumenti$ cd ../Dnevnik
+user@Linux:~/Documents/Ekipen_Proekt/Dnevnik$ touch den1.txt
+user@Linux:~/Documents/Ekipen_Proekt/Dnevnik$ Data: 12.11.2026
+Data:: command not found
+user@Linux:~/Documents/Ekipen_Proekt/Dnevnik$ nano den1.txt
+user@Linux:~/Documents/Ekipen_Proekt/Dnevnik$ nano den2.txt
+user@Linux:~/Documents/Ekipen_Proekt/Dnevnik$ cd ../Backup
+user@Linux:~/Documents/Ekipen_Proekt/Backup$ mkdir Dnevnici
+user@Linux:~/Documents/Ekipen_Proekt/Backup$ cp ../Dnevnik/den1.txt ../Dnevnik/den2.txt Dnevnici/
+user@Linux:~/Documents/Ekipen_Proekt/Backup$ cd ../Dokumenti
+user@Linux:~/Documents/Ekipen_Proekt/Dokumenti$ nano plan.txt
+user@Linux:~/Documents/Ekipen_Proekt/Dokumenti$ cp plan.txt ../Backup/plan_obnoven.txt
+user@Linux:~/Documents/Ekipen_Proekt/Dokumenti$ cd ..
+user@Linux:~/Documents/Ekipen_Proekt$ ls -R
+.:
+Backup  Dnevnik  Dokumenti
+
+./Backup:
+Dnevnici  ekip.txt  plan.txt  plan_obnoven.txt  pravila.txt
+
+./Backup/Dnevnici:
+den1.txt  den2.txt
+
+./Dnevnik:
+den1.txt  den2.txt
+
+./Dokumenti:
+ekip.txt  plan  plan.txt  pravila  pravila.txt
+
